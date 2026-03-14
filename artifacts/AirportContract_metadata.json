@@ -1,0 +1,85 @@
+{
+	"compiler": {
+		"version": "0.8.31+commit.fd3a2265"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "_token",
+				"outputs": [
+					{
+						"internalType": "contract ERC20Simple",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getToken",
+				"outputs": [
+					{
+						"internalType": "contract ERC20Simple",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contract.sol": "AirportContract"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contract.sol": {
+			"keccak256": "0x6a35561abb23c9a49c11e4afdff6eb08828ddeda147eebcf44ea8e56c1aab9b3",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b3f8497a2bfdcbb2809318fcd02e1d2d4c71fc50e79af9d5b994e156e5a1b437",
+				"dweb:/ipfs/QmcqkY9YCwq8FacmtnzSJBiX9iaGfACJNzWf5oRSKtcFn3"
+			]
+		},
+		"erc20.sol": {
+			"keccak256": "0xb79c833cef82b103a68c9924a96958ba5e2986dee2233fadfa08790fe9b63401",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8416da54036fbaddeaba43f4258085ab7e212656227955ba7b0ce2fa730b945c",
+				"dweb:/ipfs/QmNSFgKbLGpUbi4XsySpsbzihFCjZ6wy7Xi3Cguov7tMDh"
+			]
+		}
+	},
+	"version": 1
+}

@@ -104,4 +104,23 @@ contract ERC20Simple {
         // Mint is represented as a Transfer from address(0)
         emit Transfer(address(0), to, amount);
     }
+
+    function _burn(address from, uint256 amount) internal {
+        require(from != address(0), "No hay address");
+        require(_balances[from] >= amount, "No hay suficientes tokens.");
+
+        _balances[from] -= amount;
+        _totalSupply -=amount;
+
+        emit Transfer(from, address(0), amount);
+    }
+
+    // Funciones mint y burn
+    function mint(address to, uint256 amount) external {
+        _mint(to, amount);
+    }
+
+    function burn(address from, uint256 amount) external {
+        _burn(from, amount);
+    }
 }

@@ -32,7 +32,7 @@ contract AirportContract {
         _;
     }
 
-    function register(address id_, string memory name_) internal onlyOwner  {
+    function register(address id_, string memory name_) external onlyOwner  {
         require(listPassengers[id_].id == address(0), "Passenger is already registered");
 
         Passenger memory passenger = Passenger({
@@ -44,7 +44,7 @@ contract AirportContract {
         listPassengers[id_] = passenger;
     }
 
-    function assignToken(address id, uint256 miles) internal onlyOwner {
+    function assignToken(address id, uint256 miles) external onlyOwner {
         _token.mint(id, miles);
         listPassengers[id].balance += miles;
     } 

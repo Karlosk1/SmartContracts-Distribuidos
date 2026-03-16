@@ -12,7 +12,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "_token",
+				"name": "getToken",
 				"outputs": [
 					{
 						"internalType": "contract ERC20Simple",
@@ -25,10 +25,10 @@
 			},
 			{
 				"inputs": [],
-				"name": "getToken",
+				"name": "owner",
 				"outputs": [
 					{
-						"internalType": "contract ERC20Simple",
+						"internalType": "address payable",
 						"name": "",
 						"type": "address"
 					}
@@ -65,11 +65,11 @@
 	},
 	"sources": {
 		"contract.sol": {
-			"keccak256": "0x6a35561abb23c9a49c11e4afdff6eb08828ddeda147eebcf44ea8e56c1aab9b3",
+			"keccak256": "0xc62765b76121f81c25412b5cb723456e0ba9802c0ba0f50ada4826363695e22e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://b3f8497a2bfdcbb2809318fcd02e1d2d4c71fc50e79af9d5b994e156e5a1b437",
-				"dweb:/ipfs/QmcqkY9YCwq8FacmtnzSJBiX9iaGfACJNzWf5oRSKtcFn3"
+				"bzz-raw://7e39f4629ae933c485a98994dc375e644495727c3d68f41bbedc1bd4724d3f92",
+				"dweb:/ipfs/QmQWAjAksveYtNwiQppb4a1m79BwvzhGxdm8R7FaBshNXU"
 			]
 		},
 		"erc20.sol": {

@@ -12,10 +12,13 @@ contract AirportContract {
     struct Passenger {
         address id;
         string name;
-        bool premium;
     }
 
     mapping(address => Passenger) private listPassengers;
+
+    // Events
+    event UpgradeSeat(address indexed passenger);
+    event ExtraLuggage(address indexed passenger, uint256 units);
 
     constructor(
         string memory name_,
@@ -59,11 +62,32 @@ contract AirportContract {
         _token.mint(id, miles);
     }
 
-    function burn(uint256 amount) external {
+    function burn(uint256 amount) public {
         _token.burn(msg.sender, amount);
     }
 
     function ownerBurn(address from, uint256 amount) external onlyOwner {
         _token.burn(from, amount);
     }
+    
+    function upgradeSeat() external {
+        uint256 priceSeat = 250;
+        burn(priceSeat);
+
+        emit UpgradeSeat(msg.sender);
+    }
+
+    function extraLuggage(uint256 numberOfLugagges) external {
+        uint256 priceLuggage = 250;
+        require(numberOfLugagges >= 1, "Invalid amount");
+        uint256 luggage = numberOfLugagges * priceLuggage;
+        burn(luggage);
+
+        emit ExtraLuggage(msg.sender, numberOfLugagges);
+    }
+
+    /* AÑADIR EVENTOS COMO: 
+        event ExtraLuggagePurchased(address indexed passenger, uint256 units);
+        emit ExtraLuggagePurchased(msg.sender, units);
+    */
 }

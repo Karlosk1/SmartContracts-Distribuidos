@@ -32,6 +32,38 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "passenger",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "units",
+						"type": "uint256"
+					}
+				],
+				"name": "ExtraLuggage",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "passenger",
+						"type": "address"
+					}
+				],
+				"name": "UpgradeSeat",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "uint256",
@@ -40,6 +72,19 @@
 					}
 				],
 				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "numberOfLugagges",
+						"type": "uint256"
+					}
+				],
+				"name": "extraLuggage",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -100,6 +145,24 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerBurn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "id",
 						"type": "address"
 					},
@@ -128,6 +191,13 @@
 					}
 				],
 				"name": "register",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "upgradeSeat",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -161,11 +231,11 @@
 	},
 	"sources": {
 		"contract.sol": {
-			"keccak256": "0x8d58e71a1b1332ff2a5a976bfc677ea7ac691e4b263234253aea58f6f4200d76",
+			"keccak256": "0xa2089f6f1e9bf42dc9a02abb036fe71ff6430e49924b54d4b2686cb47db30373",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://eb6a2c916028d6c5c72498f4d051468b4aeea430bdc55eb1a28e3ad484b80a30",
-				"dweb:/ipfs/Qmf9rkxHznAGgReAarE92ZiMrJnYxFJpFxyb5JCu6df4gn"
+				"bzz-raw://c84dd8ba08f3d19bb790eba8c8e7a074d587a6fbe1542fcccaf3ba9680b9b51d",
+				"dweb:/ipfs/QmevjNqW8Guc1T6Aygj2Mc3gMPYuzRZJFcycChrkScEugd"
 			]
 		},
 		"erc20.sol": {

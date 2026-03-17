@@ -3,7 +3,7 @@ pragma solidity ^0.8.20;
 
 import "./erc20.sol";
 
-contract AirportContract {
+contract AirportContract is ERC20Simple {
     string private _name;
     ERC20Simple private _token;
     uint256 private _totalSupply;
@@ -11,16 +11,18 @@ contract AirportContract {
 
     struct Passenger {
         address id;
-        uint256 balance;
         string name;
     }
 
     mapping(address => Passenger) private listPassengers;
 
-    constructor() {
-        _name = "Airport";
-        owner = payable(msg.sender);
-        _token = new ERC20Simple("Vuelitos", "Vlt", 5, 0);
+    constructor(
+        string memory name_,
+        string memory symbol_,
+        uint8 decimals_,
+        uint256 initialSupply_
+    ) ERC20Simple(name_, symbol_, decimals_, initialSupply_) {
+        owner = payable (msg.sender);
     }
 
     function getToken() external view returns (ERC20Simple) {

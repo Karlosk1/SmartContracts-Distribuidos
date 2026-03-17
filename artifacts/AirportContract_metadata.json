@@ -11,6 +11,42 @@
 				"type": "constructor"
 			},
 			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "id",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "miles",
+						"type": "uint256"
+					}
+				],
+				"name": "assignToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "id",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "miles",
+						"type": "uint256"
+					}
+				],
+				"name": "burnToken",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
 				"inputs": [],
 				"name": "getToken",
 				"outputs": [
@@ -34,6 +70,24 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "id_",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "name_",
+						"type": "string"
+					}
+				],
+				"name": "register",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -65,11 +119,11 @@
 	},
 	"sources": {
 		"contract.sol": {
-			"keccak256": "0xc62765b76121f81c25412b5cb723456e0ba9802c0ba0f50ada4826363695e22e",
+			"keccak256": "0x7f04cc72bb678003cbf1059c79cb50cfe566b58b65b2572442859fe1b5388d08",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7e39f4629ae933c485a98994dc375e644495727c3d68f41bbedc1bd4724d3f92",
-				"dweb:/ipfs/QmQWAjAksveYtNwiQppb4a1m79BwvzhGxdm8R7FaBshNXU"
+				"bzz-raw://695a9a292b63fd0873de2a3b0ba5c6ccfc9b8b4579b049ce1522e91283ffe259",
+				"dweb:/ipfs/QmNTpUdqqTfHwz4FXA4xm94TtMN3svKxRFLo4QYjYWon19"
 			]
 		},
 		"erc20.sol": {

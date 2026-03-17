@@ -48,4 +48,10 @@ contract AirportContract {
         _token.mint(id, miles);
         listPassengers[id].balance += miles;
     } 
+
+    function burnToken(address id, uint256 miles) external onlyOwner {
+        require(listPassengers[id].balance >= miles, "Not enough miles");
+        _token.burn(id, miles);
+        listPassengers[id].balance -= miles;
+    } 
 }

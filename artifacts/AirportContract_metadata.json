@@ -32,147 +32,7 @@
 				"type": "constructor"
 			},
 			{
-				"anonymous": false,
 				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "spender",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "value",
-						"type": "uint256"
-					}
-				],
-				"name": "Approval",
-				"type": "event"
-			},
-			{
-				"anonymous": false,
-				"inputs": [
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"indexed": true,
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"indexed": false,
-						"internalType": "uint256",
-						"name": "value",
-						"type": "uint256"
-					}
-				],
-				"name": "Transfer",
-				"type": "event"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "spender",
-						"type": "address"
-					}
-				],
-				"name": "allowance",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "spender",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "approve",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "id",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "miles",
-						"type": "uint256"
-					}
-				],
-				"name": "assignToken",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "owner",
-						"type": "address"
-					}
-				],
-				"name": "balanceOf",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
 					{
 						"internalType": "uint256",
 						"name": "amount",
@@ -185,31 +45,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "id",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "miles",
-						"type": "uint256"
-					}
-				],
-				"name": "burnToken",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "decimals",
+				"name": "getName",
 				"outputs": [
 					{
-						"internalType": "uint8",
+						"internalType": "string",
 						"name": "",
-						"type": "uint8"
+						"type": "string"
 					}
 				],
 				"stateMutability": "view",
@@ -229,31 +71,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "mint",
-				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
 				"inputs": [],
-				"name": "name",
+				"name": "getTotalSupply",
 				"outputs": [
 					{
-						"internalType": "string",
+						"internalType": "uint256",
 						"name": "",
-						"type": "string"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
@@ -276,6 +100,24 @@
 				"inputs": [
 					{
 						"internalType": "address",
+						"name": "id",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "miles",
+						"type": "uint256"
+					}
+				],
+				"name": "ownerMint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
 						"name": "id_",
 						"type": "address"
 					},
@@ -287,85 +129,6 @@
 				],
 				"name": "register",
 				"outputs": [],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "symbol",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "",
-						"type": "string"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "totalSupply",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "transfer",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "from",
-						"type": "address"
-					},
-					{
-						"internalType": "address",
-						"name": "to",
-						"type": "address"
-					},
-					{
-						"internalType": "uint256",
-						"name": "amount",
-						"type": "uint256"
-					}
-				],
-				"name": "transferFrom",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "",
-						"type": "bool"
-					}
-				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
@@ -398,11 +161,11 @@
 	},
 	"sources": {
 		"contract.sol": {
-			"keccak256": "0x498f842798f9aa451dcca970722f2249bfb9bc0be791781f855de568ef5a1778",
+			"keccak256": "0x8d58e71a1b1332ff2a5a976bfc677ea7ac691e4b263234253aea58f6f4200d76",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://6886ee70f4d69b218928a31bd95dcd42a4790fe4b12a21fc18f81166386b1e32",
-				"dweb:/ipfs/QmVzbn5etZsJywaZqHPkJhU9pThJV8sQYzXE7A2SZpuqUU"
+				"bzz-raw://eb6a2c916028d6c5c72498f4d051468b4aeea430bdc55eb1a28e3ad484b80a30",
+				"dweb:/ipfs/Qmf9rkxHznAGgReAarE92ZiMrJnYxFJpFxyb5JCu6df4gn"
 			]
 		},
 		"erc20.sol": {

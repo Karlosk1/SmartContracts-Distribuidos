@@ -3,7 +3,7 @@ pragma solidity ^0.8.20;
 
 import "./erc20.sol";
 
-contract AirportContract is ERC20Simple {
+contract AirportContract {
     string private _name;
     ERC20Simple private _token;
     uint256 private _totalSupply;
@@ -12,6 +12,7 @@ contract AirportContract is ERC20Simple {
     struct Passenger {
         address id;
         string name;
+        bool premium;
     }
 
     mapping(address => Passenger) private listPassengers;
@@ -21,8 +22,17 @@ contract AirportContract is ERC20Simple {
         string memory symbol_,
         uint8 decimals_,
         uint256 initialSupply_
-    ) ERC20Simple(name_, symbol_, decimals_, initialSupply_) {
+    ) {
         owner = payable (msg.sender);
+        _token = new ERC20Simple(name_, symbol_, decimals_, initialSupply_);
+    }
+
+    function getName() external view returns (string memory) {
+        return _name;
+    }
+
+    function getTotalSupply() external view returns (uint256) {
+        return _totalSupply;
     }
 
     function getToken() external view returns (ERC20Simple) {
@@ -39,21 +49,21 @@ contract AirportContract is ERC20Simple {
 
         Passenger memory passenger = Passenger({
             id: id_,
-            balance: 0,
             name: name_
         });
 
         listPassengers[id_] = passenger;
     }
 
-    function assignToken(address id, uint256 miles) external onlyOwner {
+    function ownerMint(address id, uint256 miles) external onlyOwner {
         _token.mint(id, miles);
-        listPassengers[id].balance += miles;
-    } 
+    }
 
-    function burnToken(address id, uint256 miles) external onlyOwner {
-        require(listPassengers[id].balance >= miles, "Not enough miles");
-        _token.burn(id, miles);
-        listPassengers[id].balance -= miles;
-    } 
+    function burn(uint256 amount) external {
+        _token.burn(msg.sender, amount);
+    }
+
+    function ownerBurn(address from, uint256 amount) external onlyOwner {
+        _token.burn(from, amount);
+    }
 }

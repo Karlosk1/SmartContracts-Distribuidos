@@ -41,8 +41,8 @@ contract AirportContract {
         return _token;
     }
 
-    function getBalancePassenger() external view returns (uint256) {
-        return _token.balanceOf(msg.sender);
+    function getBalancePassenger(address id_) external view returns (uint256) {
+        return _token.balanceOf(id_);
     }
 
     modifier onlyOwner {

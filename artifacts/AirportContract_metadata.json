@@ -121,7 +121,13 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "id_",
+						"type": "address"
+					}
+				],
 				"name": "getBalancePassenger",
 				"outputs": [
 					{
@@ -276,11 +282,11 @@
 	},
 	"sources": {
 		"contract.sol": {
-			"keccak256": "0x25206e39151bfef42a26d8f049343170c80b69d78a620189c54d969f374abbb8",
+			"keccak256": "0x623e29a81b564dd3b1ed7953b1e42ef5030c2096b861a9c302a010619414306e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1b1d7901baaf3ca0453154a2d38fcb8d8cb47c605eb1d3b4b4eb3cfdba1c1097",
-				"dweb:/ipfs/QmXgYRBo19xpJnGQpGBDzyPudE5EBGCybFFi9udR2D4YmB"
+				"bzz-raw://ec0b7db9e85a04396b004bb0b798ef827585c9c82c9c16a1dd6f98f6a9a9b385",
+				"dweb:/ipfs/QmPyZxSf1UHNpUojGDeUdfrSP4Ur8eBy4UgqP2ywR3uVmW"
 			]
 		},
 		"erc20.sol": {

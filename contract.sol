@@ -44,6 +44,10 @@ contract AirportContract {
         return _token;
     }
 
+    function getBalancePassenger() external view returns (uint256) {
+        return _token.balanceOf(msg.sender);
+    }
+
     modifier onlyOwner {
         require(msg.sender == owner, "You are not the owner");
         _;

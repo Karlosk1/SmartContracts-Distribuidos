@@ -26,6 +26,11 @@
 						"internalType": "uint256",
 						"name": "initialSupply_",
 						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "airportName",
+						"type": "string"
 					}
 				],
 				"stateMutability": "nonpayable",
@@ -271,11 +276,11 @@
 	},
 	"sources": {
 		"contract.sol": {
-			"keccak256": "0x48a40f60d616d1d167d797ee004e05e5611c591e6600e79d63aeab7ac3f6a060",
+			"keccak256": "0x25206e39151bfef42a26d8f049343170c80b69d78a620189c54d969f374abbb8",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://dbf706d5abf18f81190f9e8e8e7a2601dc0e682427981c878327b8355740d07c",
-				"dweb:/ipfs/QmWjMY2kLxeeHc7SGAHHcosXyk3gvP9mMSZkwJMZ1JedVp"
+				"bzz-raw://1b1d7901baaf3ca0453154a2d38fcb8d8cb47c605eb1d3b4b4eb3cfdba1c1097",
+				"dweb:/ipfs/QmXgYRBo19xpJnGQpGBDzyPudE5EBGCybFFi9udR2D4YmB"
 			]
 		},
 		"erc20.sol": {

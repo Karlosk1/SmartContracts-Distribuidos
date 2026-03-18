@@ -25,10 +25,12 @@ contract AirportContract {
         string memory name_,
         string memory symbol_,
         uint8 decimals_,
-        uint256 initialSupply_
+        uint256 initialSupply_,
+        string memory airportName
     ) {
         owner = payable (msg.sender);
         _token = new ERC20Simple(name_, symbol_, decimals_, initialSupply_);
+        _name = airportName;
     }
 
     function getName() external view returns (string memory) {

@@ -6,7 +6,6 @@ import "./erc20.sol";
 contract AirportContract {
     string private _name;
     ERC20Simple private _token;
-    uint256 private _totalSupply;
     address payable public owner;
 
     struct Passenger {
@@ -34,10 +33,6 @@ contract AirportContract {
 
     function getName() external view returns (string memory) {
         return _name;
-    }
-
-    function getTotalSupply() external view returns (uint256) {
-        return _totalSupply;
     }
 
     function getToken() external view returns (ERC20Simple) {

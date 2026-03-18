@@ -19,6 +19,8 @@ contract AirportContract {
     // Events
     event UpgradeSeat(address indexed passenger);
     event ExtraLuggage(address indexed passenger, uint256 units);
+    event UpgradeUser(address indexed passenger);
+    event UpgradeLounge(address indexed passenger);
 
     constructor(
         string memory name_,
@@ -86,8 +88,17 @@ contract AirportContract {
         emit ExtraLuggage(msg.sender, numberOfLugagges);
     }
 
-    /* AÑADIR EVENTOS COMO: 
-        event ExtraLuggagePurchased(address indexed passenger, uint256 units);
-        emit ExtraLuggagePurchased(msg.sender, units);
-    */
+    function upgradeUser() external {
+        uint256 priceUpgrade = 500;
+        burn(priceUpgrade);
+
+        emit UpgradeUser(msg.sender);
+    }
+
+    function upgradeLounge() external {
+        uint256 priceLounge = 500;
+        burn(priceLounge);
+
+        emit UpgradeLounge(msg.sender);
+    }
 }

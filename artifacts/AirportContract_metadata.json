@@ -60,7 +60,33 @@
 						"type": "address"
 					}
 				],
+				"name": "UpgradeLounge",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "passenger",
+						"type": "address"
+					}
+				],
 				"name": "UpgradeSeat",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "passenger",
+						"type": "address"
+					}
+				],
+				"name": "UpgradeUser",
 				"type": "event"
 			},
 			{
@@ -197,7 +223,21 @@
 			},
 			{
 				"inputs": [],
+				"name": "upgradeLounge",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "upgradeSeat",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "upgradeUser",
 				"outputs": [],
 				"stateMutability": "nonpayable",
 				"type": "function"
@@ -231,11 +271,11 @@
 	},
 	"sources": {
 		"contract.sol": {
-			"keccak256": "0xa2089f6f1e9bf42dc9a02abb036fe71ff6430e49924b54d4b2686cb47db30373",
+			"keccak256": "0xc32332e2a296c5ecde79354d0f68b5e83e7a39c1c38135e48c340ee90f591351",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c84dd8ba08f3d19bb790eba8c8e7a074d587a6fbe1542fcccaf3ba9680b9b51d",
-				"dweb:/ipfs/QmevjNqW8Guc1T6Aygj2Mc3gMPYuzRZJFcycChrkScEugd"
+				"bzz-raw://17099ffc736b0a16854e8b97a394488cd27ef861e79a7f46a38eef303298ff6e",
+				"dweb:/ipfs/QmenUPFtJ3X3hXCtkT3P4R1Wqt7nbr6tUjRZLCyk56sG7R"
 			]
 		},
 		"erc20.sol": {

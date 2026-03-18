@@ -41,14 +41,14 @@ contract AirportContract {
         return _token;
     }
 
-    function getBalancePassenger(address id_) external view returns (uint256) {
+    function getBalancePassenger(address id_) external onlyOwner view returns (uint256) {
         return _token.balanceOf(id_);
     }
 
     function getBalancePassenger() external view returns (uint256) {    
         return _token.balanceOf(msg.sender);
     }
-    
+
     modifier onlyOwner {
         require(msg.sender == owner, "You are not the owner");
         _;

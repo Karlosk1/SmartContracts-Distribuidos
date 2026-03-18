@@ -141,6 +141,19 @@
 			},
 			{
 				"inputs": [],
+				"name": "getBalancePassenger",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "getName",
 				"outputs": [
 					{
@@ -282,11 +295,11 @@
 	},
 	"sources": {
 		"contract.sol": {
-			"keccak256": "0x623e29a81b564dd3b1ed7953b1e42ef5030c2096b861a9c302a010619414306e",
+			"keccak256": "0x04a15940cd7ec55e0d0b83f72a3aa85a95cb1099039923658dd4464c440c36d5",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://ec0b7db9e85a04396b004bb0b798ef827585c9c82c9c16a1dd6f98f6a9a9b385",
-				"dweb:/ipfs/QmPyZxSf1UHNpUojGDeUdfrSP4Ur8eBy4UgqP2ywR3uVmW"
+				"bzz-raw://9b42d8aa0cbfebaec8cbd89ec420c93e29f15aea15fdc9ce7d0f337d1370e9c8",
+				"dweb:/ipfs/QmdFuDLDB7sn8a6DQidfQfazBppKaPSTvnoiJ8YW8Aryi2"
 			]
 		},
 		"erc20.sol": {
